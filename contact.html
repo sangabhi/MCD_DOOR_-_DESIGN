@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Assets/logo.jpg" type="image/jpg">
   <title>Contact Us - MCD Doors and Design</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -90,22 +91,47 @@
         </p>
       </div>
       <div class="col-md-6">
-        <h4>Contact Form</h4>
-            <form action="https://formsubmit.co/mcddoordesign25@gmail.com" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <!-- <h4>Contact Form</h4> -->
+       <!-- Contact Form -->
+<h4 class="mb-3">Contact Form</h4>
+<form action="https://formsubmit.co/abhidubey1555@gmail.com" method="POST">
+
+  <!-- Hidden Configuration -->
+  <input type="hidden" name="_captcha" value="false">
+  <!-- <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html"> -->
+  <input type="hidden" name="_subject" value="New Inquiry from MCD Door & Design Website">
+  <input type="hidden" name="_replyto" value="email">
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Form Fields -->
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required />
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone">Your Phone</label>
+    <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Type your message here..." required></textarea>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary px-4 py-2">
+      <i class="fas fa-paper-plane mr-2"></i>Send Message
+    </button>
+  </div>
+</form>
+
       </div>
     </div>
   </div>
