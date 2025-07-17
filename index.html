@@ -2,178 +2,213 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-<meta name="description" content="MCD Doors and Design - Affordable, stylish, and durable wooden doors and custom design solutions for modern homes.">
-<meta name="keywords" content="wooden doors, MCD Doors, door design, custom doors, Pratapgarh, Uttar Pradesh, home decor, factory, door manufacturer">
-<meta name="author" content="MCD Doors and Design">
-
-  <link rel="icon" href="Assets/logo.jpg" type="image/jpg">
-  <title>MCD Doors and Design</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Opening - MCD Door & Design</title>
   <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .info-banner {
-      background-color: #f8f9fa;
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .intro {
+      z-index: 1;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in-out;
     }
-    .info-banner h2 {
-      animation: fadeInUp 1s ease-in-out;
+
+    h1 {
+      font-size: 4rem;
+      color: gold;
+      text-shadow: 0 0 20px #fff;
+      transform: translateY(-30px) rotateX(30deg);
+      animation: slideIn 2s ease-out forwards;
     }
-    .info-banner p {
+
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      animation: fadeInUp 3s ease-in-out;
+    }
+
+    .countdown {
+      font-size: 2rem;
+      margin: 20px 0;
+      animation: zoomIn 2s ease-in-out;
+    }
+
+    .enter-btn {
+      margin-top: 40px;
+      padding: 15px 30px;
       font-size: 1.2rem;
-      animation: fadeInUp 1.5s ease-in-out;
+      color: #fff;
+      background-color: #8e44ad;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+      transition: all 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      transform: scale(1.1) rotate(-2deg);
+      background: #9b59b6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-100px) rotateX(90deg); }
+      to { transform: translateY(0) rotateX(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">
-      <img src="Assets/logo.jpg" alt="MCD Doors Logo" height="50">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="craft.html">Our Crafts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Carousel -->
-  <div id="mainCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#mainCarousel" data-slide-to="1"></li>
-      <li data-target="#mainCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Assets/Img-1.webp" class="d-block w-100" alt="Elegant Design">
-      </div>
-      <div class="carousel-item">
-        <img src="Assets/img-2.webp" class="d-block w-100" alt="Affordable Price">
-      </div>
-      <div class="carousel-item">
-        <img src="Assets/img-3.webp" class="d-block w-100" alt="Quality Product">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+  <canvas id="fireworks"></canvas>
+  <div class="intro">
+    <h1>🎉 Grand Opening 🎉</h1>
+    <p>Welcome to the Royal Inauguration of MCD Door & Design</p>
+    <div class="countdown" id="countdown">Loading countdown...</div>
+    <button class="enter-btn" onclick="location.href='home.html'">Enter Site</button>
   </div>
 
-  <!-- Animated Info Section -->
-  <!-- Animated Info Section -->
-  <div class="info-banner text-center py-5 bg-light">
-    <h2 class="mb-3">Elegant Designs for Modern Homes</h2>
-    <p class="lead">We bring you custom wooden doors at the most affordable prices without compromising on quality.</p>
-    <p class="lead">Choose MCD Doors and Design – where creativity meets craftsmanship.</p>
-  </div>
+  <script>
+    // Fireworks canvas animation
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-  <!-- Factory Features Section -->
-  <section class="features-section py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Our Factory Highlights</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Assets/img-4.webp" class="card-img-top" alt="Modern Machinery">
-            <div class="card-body">
-              <h5 class="card-title">Advanced Machinery</h5>
-              <p class="card-text">Equipped with state-of-the-art CNC and Punching Machines  tools for perfect finishing and precision.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Assets/img-5.webp" class="card-img-top" alt="Quality Control">
-            <div class="card-body">
-              <h5 class="card-title">Strict Quality Control</h5>
-              <p class="card-text">Every product goes through a multi-layer quality check to ensure long life and aesthetics.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Assets/img-6.webp" class="card-img-top" alt="Skilled Workers">
-            <div class="card-body">
-              <h5 class="card-title">Skilled Workforce</h5>
-              <p class="card-text">Our team includes experienced artisans and professionals dedicated to crafting excellence.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    class Firework {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height;
+        this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        this.radius = Math.random() * 2 + 1;
+        this.speedY = Math.random() * -7 - 3;
+        this.exploded = false;
+        this.particles = [];
+      }
+      update() {
+        if (!this.exploded) {
+          this.y += this.speedY;
+          if (this.speedY < -0.5) this.speedY += 0.15;
+          if (this.speedY >= 0) this.exploded = true;
+        } else {
+          if (this.particles.length === 0) {
+            for (let i = 0; i < 40; i++) {
+              const angle = Math.random() * Math.PI * 2;
+              const speed = Math.random() * 4 + 1;
+              this.particles.push({
+                x: this.x,
+                y: this.y,
+                dx: Math.cos(angle) * speed,
+                dy: Math.sin(angle) * speed,
+                alpha: 1
+              });
+            }
+          }
+          this.particles.forEach(p => {
+            p.x += p.dx;
+            p.y += p.dy;
+            p.alpha -= 0.02;
+          });
+          this.particles = this.particles.filter(p => p.alpha > 0);
+          if (this.particles.length === 0) this.reset();
+        }
+      }
+      draw() {
+        if (!this.exploded) {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        } else {
+          this.particles.forEach(p => {
+            ctx.globalAlpha = p.alpha;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+          });
+          ctx.globalAlpha = 1;
+        }
+      }
+    }
 
+    const fireworks = Array.from({ length: 10 }, () => new Firework());
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Contact Us</h5>
-          <p>Email: mcddoordesign25@gmail.com</p>
-          <p>Phone: +91 7080923598</p>
-          <p>WhatsApp: <a href="https://wa.me/7080923598" target="_blank">Chat with us</a></p>
-        </div>
-        <div class="col-md-4">
-          <h5>Follow Us</h5>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61577111036246" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/mcd.door.and.design.mukesh.kr?igsh=bXNlamR2eTB2ajB0" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5>Our Location</h5>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.674380838557!2d82.05286257410764!3d25.88019230370121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a99006ecad9fd%3A0xc2ab78b99a23f671!2sMCD%20Pharmaceuticals%20(%20Medical%20Agency%20%2B%20Store)!5e0!3m2!1sen!2sin!4v1750924497609!5m2!1sen!2sin" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </div>
-      <hr style="border-color: rgba(255,255,255,0.2)">
-      <div class="text-center">
-        <p>&copy; 2025 MCD DOOR AND DESIGN || All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    function animate() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      fireworks.forEach(fw => {
+        fw.update();
+        fw.draw();
+      });
+      requestAnimationFrame(animate);
+    }
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    animate();
+
+    // Countdown Timer
+    const countdownEl = document.getElementById("countdown");
+    const targetDate = new Date("July 21, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const gap = targetDate - now;
+
+      const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+      countdownEl.innerText = `${days} Days : ${hours} Hours : ${minutes} Minutes : ${seconds} Seconds`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 
 </html>
